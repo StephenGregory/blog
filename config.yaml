@@ -1,0 +1,25 @@
+---
+baseURL: &baseURL "http://stephengregory.github.io"
+defaultContentLanguage: "en"
+metaDataFormat: "yaml"
+paginate: 10
+theme: "casper"
+title: "Stephen Gregory"
+watch: true
+
+params:
+    author: "Stephen Gregory"
+    authorlocation: "Newfoundland, Canada"
+    authorwebsite: *baseURL
+    bio: ""
+    cover: "images/cover_peace_bridge.jpg"
+    description: "Engineer. Photographer. Music enthusiast. Wizard."
+    email: "stephengregorynl@gmail.com"
+    flickrName: "stephengregorynl"
+    githubName: "stephengregory"
+    instagramName: "stephengregory"
+    logo: "images/logo.png"
+    linkedinName: "stephengregorynl"
+    twitterName: "hedz_09"
+
+---
