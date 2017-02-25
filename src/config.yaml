@@ -1,5 +1,5 @@
 ---
-baseURL: &baseURL "http://stephengregory.github.io/"
+baseURL: &baseURL "https://stephengregory.github.io/"
 defaultContentLanguage: "en"
 metaDataFormat: "yaml"
 paginate: 10
