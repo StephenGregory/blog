@@ -13,6 +13,8 @@ params:
     authorwebsite: *baseURL
     bio: ""
     cover: "images/cover_peace_bridge.jpg"
+    customCSS:
+      - "css/sg.css"
     description: "Engineer. Photographer. Music enthusiast. Wizard."
     email: "stephengregorynl@gmail.com"
     flickrName: "stephengregorynl"
