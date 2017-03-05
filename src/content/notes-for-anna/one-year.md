@@ -48,8 +48,8 @@ I can't find the words to truely express how I feel, so I'll keep it brief.
 
 ![The Amy to my Rory](/images/amy-rory-doctor.jpeg)
 
-#### The Ariel to my Mathias
+#### The Rocket to my Groot
 
-![The Ariel to my Mathias](/images/mathias-ariel.jpg) 
+![The Rocket to my Groot](/images/rocket-groot.png)
 
 I can’t wait to see what adventures this year brings. We're going to have a lot of fun. Now let's go grab some ice cream.
