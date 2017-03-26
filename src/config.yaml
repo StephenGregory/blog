@@ -7,6 +7,11 @@ theme: "casper"
 title: "Stephen Gregory"
 watch: true
 
+menu:
+    main:
+        - name: "Art"
+          url: "/art"
+
 params:
     author: "Stephen Gregory"
     authorlocation: "Newfoundland, Canada"
