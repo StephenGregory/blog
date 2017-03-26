@@ -22,6 +22,8 @@ params:
     instagramName: "stephengregory"
     logo: "images/logo.png"
     linkedinName: "stephengregorynl"
+    excludesectionsfromhome:
+        - notes-for-anna
     twitterName: "hedz_09"
 
 ---

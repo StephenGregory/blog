@@ -6,16 +6,15 @@
         {{end}}
     {{ end }}
 
-    {{ if not ($.Scratch.Get "paginatedSections") }}
-        {{ if isset .Site.Params "paginatedSections" }}
-            {{ $.Scratch.Set "paginatedSections" .Site.Params.paginatedSections }}
+    {{ if not ($.Scratch.Get "excludesectionsfromhome") }}
+        {{ if isset .Site.Params "excludesectionsfromhome" }}
+            {{ $.Scratch.Set "excludesectionsfromhome" .Site.Params.excludesectionsfromhome }}
         {{ else }}
-            {{ $.Scratch.Set "paginatedSections" "post" }}
+            {{ $.Scratch.Set "excludesectionsfromhome" "" }}
         {{ end }}
     {{ end }}
 
-    {{ $list := where .Data.Pages "Section" "in" ($.Scratch.Get "paginatedSections") }}
-    {{ $list := where $list "Section" "!=" "" }}
+    {{ $list := where .Data.Pages "Section" "not in" ($.Scratch.Get "excludesectionsfromhome") }}
     {{ $paginator := .Paginate ( $list ) }}
 
     {{if ne $paginator.TotalPages 0}}
