@@ -1,12 +1,12 @@
 ---
 baseURL: &baseURL "https://stephengregory.github.io/"
 defaultContentLanguage: "en"
+disqusShortname: stephengregorynl
 metaDataFormat: "yaml"
 paginate: 10
 theme: "casper"
 title: "Stephen Gregory"
 watch: true
-
 menu:
     main:
         - name: "Art"
