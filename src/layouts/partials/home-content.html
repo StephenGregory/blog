@@ -1,30 +1,22 @@
-    {{ range .Data.Pages }}
-        {{if eq .Type "index" }}
-        <div class="index-content post">
-        {{.Content}}
-        </div>
-        {{end}}
-    {{ end }}
+{{ range .Data.Pages }}
+{{if eq .Type "index" }}
+<div class="index-content post">
+    {{.Content}}
+</div>
+{{end}}
+{{ end }}
 
-    {{ if not ($.Scratch.Get "excludesectionsfromhome") }}
-        {{ if isset .Site.Params "excludesectionsfromhome" }}
-            {{ $.Scratch.Set "excludesectionsfromhome" .Site.Params.excludesectionsfromhome }}
-        {{ else }}
-            {{ $.Scratch.Set "excludesectionsfromhome" "" }}
-        {{ end }}
-    {{ end }}
+{{ $list := where .Data.Pages "Section" "not in" ($.Site.Params.excludesectionsfromhome | default "") }}
+{{ $paginator := .Paginate ( $list ) }}
 
-    {{ $list := where .Data.Pages "Section" "not in" ($.Scratch.Get "excludesectionsfromhome") }}
-    {{ $paginator := .Paginate ( $list ) }}
+{{if ne $paginator.TotalPages 0}}
+<div class="extra-pagination inner">
+    {{ partial "pagination.html" $paginator }}
+</div>
 
-    {{if ne $paginator.TotalPages 0}}
-        <div class="extra-pagination inner">
-            {{ partial "pagination.html" $paginator }}
-        </div>
+{{ range $index, $page := $paginator.Pages }}
+{{ partial "li.html" . }}
+{{ end }}
 
-        {{ range $index, $page := $paginator.Pages }}
-            {{ partial "li.html" . }}
-        {{ end }}
-
-        {{ partial "pagination.html" $paginator }}
-    {{end}}
+{{ partial "pagination.html" $paginator }}
+{{end}}
