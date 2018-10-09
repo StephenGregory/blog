@@ -11,6 +11,8 @@ menu:
     main:
         - name: "Art"
           url: "/art"
+        - name: "DIY"
+          url: "/diy"
 
 params:
     author: "Stephen Gregory"
